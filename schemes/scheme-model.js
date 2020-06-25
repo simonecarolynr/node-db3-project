@@ -43,7 +43,7 @@ function add(scheme) {
 
 function update(changes, id) {
     return db("schemes")
-    .where({ id })
+    .where({id})
     .update(changes)
 }
 
@@ -51,7 +51,7 @@ function remove(id) {
     if(!id){
         return null;
     }
-    
+
     return db("schemes")
     .where("id", id)
     .del()
